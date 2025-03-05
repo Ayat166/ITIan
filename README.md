@@ -30,7 +30,7 @@ ITlan/
 │── templates/           # Shared templates
 │   │── base.html        # Base template with navbar and footer
 │
-│── assets/              # Static assets 
+│── static/              # Static assets 
 │
 │── db.sqlite3           # SQLite database
 │── manage.py            # Django management script
@@ -79,7 +79,6 @@ The base template (`base.html`) includes a navbar with links to:
 4. Install dependencies:
    ```sh
    pip install -r requirements.txt
-   ```
    ```
 5. Run the development server:
    ```sh
