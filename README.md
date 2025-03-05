@@ -65,7 +65,7 @@ The base template (`base.html`) includes a navbar with links to:
 ## Setup Instructions
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/ITlan.git
+   git clone https://github.com/Ayat166/Django-Day1.git
    ```
 2. Navigate to the project directory:
    ```sh
