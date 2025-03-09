@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Update Trainee {% endblock %}
+
+{% block content %}
+<div class="container mt-4 p-4 border rounded shadow bg-light">
+  <h2 class="mb-4 text-center">Update Trainee</h2>
+  
+  <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="traineeName" class="form-label">Trainee Name</label>
+      <input type="text" class="form-control" id="traineeName" name="name" placeholder="Enter trainee name" value="{{trainee.name}} "required>
+    </div>
+    <div class="mb-3">
+      <label for="traineeEmail" class="form-label">Trainee Email</label>
+      <input type="email" class="form-control" id="traineeEmail" name="email" placeholder="Enter trainee name" value="{{trainee.email}} "required>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Update Trainee</button>
+  </form>
+</div>
+{% endblock %}

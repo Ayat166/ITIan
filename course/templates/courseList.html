@@ -4,11 +4,15 @@
 
 {% block content %}
   <h2 class="mb-4">Courses List</h2>
+  <div>
+    <a class="btn btn-success" href="{% url 'addCourse' %}">Add Course</a>
+  </div>
+  <br>
   <ul class="list-group">
     {% for course in courses %}
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <div>
-          <span class="fw-bold">{{ course.id }}:</span> {{ course.name }}
+          {{ course.name }}
         </div>
         <div>
           <a href="{% url 'updateCourse' course.id %}" class="btn btn-sm btn-primary me-2">Edit</a>

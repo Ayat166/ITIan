@@ -3,12 +3,20 @@
 {% block title %} List of Trainees {% endblock %}
 
 {% block content %}
+ 
   <h2 class="mb-4">Trainee List</h2>
+  <div>
+    <a class="btn btn-success" href="{% url 'addTrainee' %}">Add Trainee</a>
+  </div>
+  <br>
   <ul class="list-group">
     {% for trainee in trainees %}
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <div>
-        <span class="fw-bold">{{ trainee.id }}:</span> {{ trainee.name }}
+         {{ trainee.name }}
+      </div>
+      <div>
+        {{ trainee.email }}
       </div>
       <div>
         <a href="{% url 'updateTrainee' trainee.id %}" class="btn btn-sm btn-primary me-2">Edit</a>

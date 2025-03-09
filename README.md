@@ -21,18 +21,19 @@ ITlan/
 │   │── views.py         # View functions for trainees
 │   │── urls.py          # URL routing for trainees
 │   │── templates/       # HTML templates for trainees
+│   │── models/          # Model Class for Trainee
 │
 │── course/              # Course management app
 │   │── views.py         # View functions for courses
 │   │── urls.py          # URL routing for courses
 │   │── templates/       # HTML templates for courses
+│   │── models/          # Model Class for Courses
 │
 │── templates/           # Shared templates
 │   │── base.html        # Base template with navbar and footer
 │
 │── static/              # Static assets 
 │
-│── db.sqlite3           # SQLite database
 │── manage.py            # Django management script
 │── README.md            # Project documentation
 ```
@@ -58,14 +59,12 @@ ITlan/
 ## Navigation Links
 The base template (`base.html`) includes a navbar with links to:
 - Trainee List
-- Add Trainee
 - Course List
-- Add Course
 
 ## Setup Instructions
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Ayat166/Django-Day1.git
+   git clone https://github.com/Ayat166/ITIan.git
    ```
 2. Navigate to the project directory:
    ```sh
@@ -76,15 +75,11 @@ The base template (`base.html`) includes a navbar with links to:
    python -m venv env
    source env/bin/activate  # On Windows use `env\Scripts\activate`
    ```
-4. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-5. Run the development server:
+4. Run the development server:
    ```sh
    python manage.py runserver
    ```
-7. Open the browser and visit:
+5. Open the browser and visit:
    ```
    http://127.0.0.1:8000/
    ```
