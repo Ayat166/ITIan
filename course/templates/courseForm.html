@@ -9,8 +9,8 @@
   <form method="POST">
     {% csrf_token %}
     <div class="mb-3">
-      <label for="CourseName" class="form-label">Course Name</label>
-      <input type="text" class="form-control" id="CourseName" name="name" placeholder="Enter Course name" required>
+      {{ form.name.label_tag }}
+      {{ form.name }}
     </div>
 
     <button type="submit" class="btn btn-primary w-100">Add Course</button>
