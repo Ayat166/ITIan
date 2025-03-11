@@ -19,6 +19,9 @@
         {{ trainee.email }}
       </div>
       <div>
+        {{ trainee.course.name }}
+      </div>
+      <div>
         <a href="{% url 'updateTrainee' trainee.id %}" class="btn btn-sm btn-primary me-2">Edit</a>
         <a href="{% url 'deleteTrainee' trainee.id %}" class="btn btn-sm btn-danger">Delete</a>
       </div>
