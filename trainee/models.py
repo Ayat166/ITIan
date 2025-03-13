@@ -18,4 +18,7 @@ class Trainee(models.Model):
     @classmethod
     def getTraineeById(cls,id):
         return cls.objects.get(id=id)
-        
+    
+    @classmethod
+    def deleteTraineeById(cls,id):
+        return cls.objects.filter(id=id).update(status=False)

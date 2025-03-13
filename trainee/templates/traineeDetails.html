@@ -1,19 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %} List of Trainees {% endblock %}
+{% block title %} Details of Trainee {% endblock %}
 
 {% block content %}
  
-  <h2 class="mb-4">Trainee List</h2>
-  <div>
-    <a class="btn btn-success" href="{% url 'addTrainee' %}">Add Trainee</a>
-  </div>
+  <h2 class="mb-4">Trainee Details</h2>
+  
   <br>
   <ul class="list-group">
-    {% for trainee in trainees %}
     <li class="list-group-item d-flex justify-content-between align-items-center">
       <div>
-        <a href="{% url 'traineeDetails' trainee.id %}" class="btn btn-sm btn-secondary me-2">{{ trainee.name }}</a>
+         {{ trainee.name }}
       </div>
       <div>
         {{ trainee.email }}
@@ -26,6 +23,5 @@
         <a href="{% url 'deleteTrainee' trainee.id %}" class="btn btn-sm btn-danger">Delete</a>
       </div>
     </li>
-    {% endfor %}
   </ul>
 {% endblock %}
