@@ -3,6 +3,7 @@
 ## Project Overview
 ITlan is a Django-based web application that manages trainees and courses. The project consists of multiple apps, including a **trainee management system** and a **course management system**, as well as authentication functionalities.
 ![alt text](assets/image.png)
+![alt text](assets/image7.png)
 ![alt text](assets/image2.png)
 ![alt text](assets/image3.png)
 ![alt text](assets/image4.png)
@@ -44,6 +45,7 @@ ITlan/
 - `addTrainee`: Form to add a new trainee (POST request).
 - `updateTrainee`: Updates a trainee and redirects to the trainee list.
 - `deleteTrainee`: Deletes a trainee and redirects to the trainee list.
+- `viewTrainee`: Display details of trainee .
 
 ### Course Management
 - `courseList`: Displays a table of courses.
