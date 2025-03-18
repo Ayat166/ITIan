@@ -85,3 +85,74 @@ The base template (`base.html`) includes a navbar with links to:
    ```
    http://127.0.0.1:8000/
    ```
+
+
+
+
+# README
+
+## Website
+
+### Overview
+This project provides a web application for managing trainees and courses. Users can add, update, delete, and view trainees and courses.
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd project_directory
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run migrations:
+   ```bash
+   python manage.py migrate
+   ```
+5. Start the development server:
+   ```bash
+   python manage.py runserver
+   ```
+
+
+## API Endpoints
+
+### Overview
+This project includes a REST API for managing trainees and courses using Django REST Framework (DRF).
+
+### API URL Patterns
+| URL | Method | View | Description |
+|------|--------|------|-------------|
+| `/API` | GET | `Trainee_List_Add.as_view()` | List all trainees |
+| `/API` | POST | `Trainee_List_Add.as_view()` | Add a new trainee |
+| `/API/<int:pk>` | GET | `Trainee_Update_Delete_Generic.as_view()` | Retrieve a trainee |
+| `/API/<int:pk>` | PATCH | `Trainee_Update_Delete_Generic.as_view()` | Update a trainee |
+| `/API/<int:pk>` | DELETE | `Trainee_Update_Delete_Generic.as_view()` | Soft delete a trainee |
+| `/APIcourses/` | GET | `CourseViewSet` | List all courses |
+| `/APIcourses/` | POST | `CourseViewSet` | Add a new course |
+| `/APIcourses/<int:pk>/` | GET | `CourseViewSet` | Retrieve a course |
+| `/APIcourses/<int:pk>/` | PUT | `CourseViewSet` | Update a course |
+| `/APIcourses/<int:pk>/` | DELETE | `CourseViewSet` | Delete a course |
+| `/API/<int:id>` | PATCH | `update_Course` | Update a course (Function-based view) |
+
+![alt text](assets/image01.png)
+![alt text](assets/image02.png)
+![alt text](assets/image03.png)
+![alt text](assets/image04.png)
+![alt text](assets/image05.png)
+
+### Running the API
+1. Start the server:
+   ```bash
+   python manage.py runserver
+   ```
+2. Use Postman or CURL to test the endpoints.
+3. Example API request:
+   ```bash
+   curl -X GET http://127.0.0.1:8000/API/
+   ```
+
